@@ -1,44 +1,26 @@
 # SEO Audit: Landscape St Louis
-**URL:** https://landscapestlouis.com/  
-**Audit Date:** 2026-03-25  
+**Audited:** 2026-03-26
+**Method:** Direct HTTP checks + HTML inspection
 
----
+## Quick Stats
+| Check | Result |
+|-------|--------|
+| Blog | Yes (HTTP 200 from /blog/) |
+| H1 Tag | Detected in HTML |
+| Meta Description | Present (156 chars) |
+| HTTPS | Redirects correctly |
+| Sitemap | /sitemap_index.xml |
+| Page Speed | 0.62s (Good — under 3s) |
+| GBP Link | Present |
+| Schema Markup | Organization, WebPage, WebSite |
+| Mobile Viewport | Present |
+| Social Links | Facebook, Instagram |
 
-## Technical Health
-| Check | Result | Status |
-|-------|--------|--------|
-| SSL/HTTPS | HTTPS active | ✅ |
-| HTTP Status | 200 | ✅ |
-| robots.txt | 200 | ✅ |
-| XML Sitemap | 200 | ✅ |
-| Schema Markup | Yes | ✅ |
+## Score: ✅ 10/10
 
-## On-Page SEO
-| Element | Value | Status |
-|---------|-------|--------|
-| Title Tag | Premier Landscape Design and Maintenance | Landscape St. Louis | ✅ |
-| Meta Description | Experience landscape design and maintenance services that focus on elegance, qua... | ✅ |
-| H1 | Missing | ⚠️ |
-| Local Keywords | Yes (service) | ✅ |
-
-## Backlink Profile
-| Metric | Value |
-|--------|-------|
-| Total Backlinks | 2730 |
-| Referring Domains | 262 |
-| Spam Score | 249 |
-
-## Content
-| Metric | Value |
-|--------|-------|
-| Blog Present | Yes |
-| Estimated Pages | Unknown (no sitemap) |
-
-## Key Issues Found
-1. No H1 tag found
+## Issues Found
+No critical issues found.
 
 ## Recommendations
-1. Add H1 tag with primary keyword and location
-
----
-*Score: 9.0/10*
+- Upgrade schema from Organization to LocalBusiness for stronger St. Louis local SEO
+- Strong social presence — verify Facebook and Instagram links are current and active

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO Playbook — Lawn & Land Marketing</title>
+  <style>
+    :root {
+      --green: #2D6A4F;
+      --green-light: #40916C;
+      --green-pale: #D8F3DC;
+      --yellow: #F4A261;
+      --dark: #1B1B1B;
+      --gray: #6B7280;
+      --gray-light: #F3F4F6;
+      --white: #FFFFFF;
+      --border: #E5E7EB;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font);
+      color: var(--dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .logo {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: -0.3px;
+    }
+    nav .logo span { color: var(--dark); }
+
+    /* HERO */
+    .hero {
+      background: var(--green);
+      color: var(--white);
+      padding: 72px 24px 64px;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 18px;
+      opacity: 0.85;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* LAYOUT */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-of-type { border-bottom: none; }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .section-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--green-pale);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .section-title h2 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      color: var(--dark);
+    }
+    .section-title p {
+      font-size: 14px;
+      color: var(--gray);
+      margin-top: 2px;
+    }
+
+    /* DELIVERABLE CARDS */
+    .cards {
+      display: grid;
+      gap: 12px;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      background: var(--white);
+    }
+    .card-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 8px;
+    }
+    .card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .card ul li {
+      font-size: 14px;
+      color: var(--gray);
+      padding-left: 18px;
+      position: relative;
+    }
+    .card ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green-light);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    /* GAP NOTICE */
+    .gap-notice {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #92400E;
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .gap-notice span { flex-shrink: 0; }
+
+    /* TOOLS TABLE */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .tool-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      background: var(--gray-light);
+    }
+    .tool-card .tool-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .tool-card .tool-use {
+      font-size: 12px;
+      color: var(--gray);
+    }
+
+    /* GAPS TABLE */
+    .gaps-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .gaps-table th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--gray);
+      padding: 10px 12px;
+      border-bottom: 2px solid var(--border);
+    }
+    .gaps-table td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .gaps-table tr:last-child td { border-bottom: none; }
+    .priority-high {
+      display: inline-block;
+      background: #FEE2E2;
+      color: #991B1B;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+    .priority-med {
+      display: inline-block;
+      background: #FEF3C7;
+      color: #92400E;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+    .status-planning {
+      display: inline-block;
+      background: var(--gray-light);
+      color: var(--gray);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+    .status-progress {
+      display: inline-block;
+      background: #DBEAFE;
+      color: #1E40AF;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 100px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+    }
+    footer strong { color: var(--white); }
+
+    @media (max-width: 600px) {
+      .section { padding: 40px 0; }
+      .hero { padding: 52px 24px 48px; }
+      .gaps-table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Lawn &amp; Land <span>Marketing</span></div>
+</nav>
+
+<div class="hero">
+  <div class="badge">SEO Playbook</div>
+  <h1>How We Do SEO</h1>
+  <p>Every deliverable, every tool, every month — the standardized process we follow for every client.</p>
+</div>
+
+<div class="container">
+
+  <!-- GBP -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📍</div>
+      <div class="section-title">
+        <h2>Google Business Profile</h2>
+        <p>Local presence, automated at scale</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Onboarding — One Time</div>
+        <h3>Profile Build & Optimization</h3>
+        <ul>
+          <li>Complete profile to 100% — every field filled</li>
+          <li>All services added with descriptions</li>
+          <li>Service areas configured accurately</li>
+          <li>Photos uploaded (exterior, work, team)</li>
+          <li>Business info verified — hours, phone, website, address</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Ongoing — Monthly</div>
+        <h3>Posts, Reviews & Optimization</h3>
+        <ul>
+          <li>52 weekly posts scheduled one year in advance</li>
+          <li>Seasonal, promotional, and educational mix</li>
+          <li>Automated review replies via Zapier + Claude AI</li>
+          <li>Ongoing GBP audits — categories, attributes, Q&A</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEBSITE -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🌐</div>
+      <div class="section-title">
+        <h2>Website</h2>
+        <p>Built to rank, built to convert</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Build — One Time</div>
+        <h3>Page Structure & Content</h3>
+        <ul>
+          <li>Core service pages (Lawn Care, Landscaping, Hardscaping, etc.)</li>
+          <li>Sub-service pages for every individual service</li>
+          <li>Service area pages — city and region-specific landing pages</li>
+          <li>All content keyword-targeted and locally relevant</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Ongoing</div>
+        <h3>Maintenance & Internal Linking</h3>
+        <ul>
+          <li>Internal linking between pages as content grows</li>
+          <li>Page updates when services or service areas change</li>
+          <li>Alt text on all new images</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gap-notice">
+      <span>⚠️</span>
+      <div><strong>Known Gap:</strong> Alt text audit on existing pages is in progress. All new content is covered.</div>
+    </div>
+  </div>
+
+  <!-- TECHNICAL SEO -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">⚙️</div>
+      <div class="section-title">
+        <h2>Technical SEO</h2>
+        <p>The foundation everything else is built on</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Onboarding — One Time</div>
+        <h3>Technical Setup</h3>
+        <ul>
+          <li>Rank Math setup and configuration on WordPress</li>
+          <li>Schema markup — LocalBusiness, Service, FAQ, Breadcrumb</li>
+          <li>XML sitemap submitted to Google Search Console</li>
+          <li>robots.txt review and optimization</li>
+          <li>301 redirect audit</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Ongoing</div>
+        <h3>Monitoring & Maintenance</h3>
+        <ul>
+          <li>Schema updates when services or business info changes</li>
+          <li>Crawl error and indexing issue resolution via GSC</li>
+          <li>Technical issue response as surfaced in monthly GSC review</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gap-notice">
+      <span>⚠️</span>
+      <div><strong>Known Gap:</strong> Rank Math configuration is not yet fully standardized across all clients. Standardization is a current priority.</div>
+    </div>
+  </div>
+
+  <!-- GSC -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <div class="section-title">
+        <h2>Google Search Console</h2>
+        <p>Ranking data, indexing health, content opportunities</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Onboarding — One Time</div>
+        <h3>Account Setup</h3>
+        <ul>
+          <li>GSC account setup and property verification</li>
+          <li>Domain vs. URL prefix configuration</li>
+          <li>Sitemap submission</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Ongoing — Monthly</div>
+        <h3>Performance Review</h3>
+        <ul>
+          <li>Monthly review — impressions, clicks, average position</li>
+          <li>Indexing issue monitoring and resolution</li>
+          <li>Keyword opportunity identification (positions 4–20)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gap-notice">
+      <span>⚠️</span>
+      <div><strong>Known Gap:</strong> GSC monitoring is not yet on a standardized reporting cadence. Formalizing this is a current priority.</div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">✍️</div>
+      <div class="section-title">
+        <h2>Content</h2>
+        <p>Fresh signals, every month</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Monthly</div>
+        <h3>Blog & On-Page Content</h3>
+        <ul>
+          <li>1 blog post per client — locally relevant, keyword-optimized</li>
+          <li>Alt text on all images in new posts and pages</li>
+          <li>Internal links added to and from every new piece of content</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gap-notice">
+      <span>⚠️</span>
+      <div><strong>Known Gap:</strong> 1 blog/month is the current baseline — not the ceiling. Increasing content cadence is a near-term priority.</div>
+    </div>
+  </div>
+
+  <!-- LINK BUILDING -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🔗</div>
+      <div class="section-title">
+        <h2>Link Building & Citations</h2>
+        <p>Authority built over time</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-label">Onboarding — One Time</div>
+        <h3>Citation Foundation</h3>
+        <ul>
+          <li>Citation submission via Whitespark — top 50+ directories</li>
+          <li>NAP consistency audit and directory cleanup</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Ongoing — 2x/Month</div>
+        <h3>Press Releases</h3>
+        <ul>
+          <li>2 press releases per month via Signal Genesis / Search Atlas</li>
+          <li>PR #1 links to homepage</li>
+          <li>PR #2 links to current month's blog post</li>
+        </ul>
+      </div>
+    </div>
+    <div class="gap-notice">
+      <span>⚠️</span>
+      <div><strong>Known Gap:</strong> No ongoing citation building or backlink outreach beyond press releases. A repeatable system for this is actively being developed.</div>
+    </div>
+  </div>
+
+  <!-- GAPS & ROADMAP -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🗺️</div>
+      <div class="section-title">
+        <h2>Roadmap</h2>
+        <p>What we're improving and when</p>
+      </div>
+    </div>
+    <table class="gaps-table">
+      <thead>
+        <tr>
+          <th>Initiative</th>
+          <th>Priority</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Standardize Rank Math configuration across all clients</td>
+          <td><span class="priority-high">High</span></td>
+          <td><span class="status-progress">In Progress</span></td>
+        </tr>
+        <tr>
+          <td>Increase blog frequency — target 2–4/month</td>
+          <td><span class="priority-high">High</span></td>
+          <td><span class="status-planning">Planning</span></td>
+        </tr>
+        <tr>
+          <td>Alt text audit on all existing client sites</td>
+          <td><span class="priority-med">Medium</span></td>
+          <td><span class="status-planning">Planning</span></td>
+        </tr>
+        <tr>
+          <td>Ongoing backlink and citation building system</td>
+          <td><span class="priority-high">High</span></td>
+          <td><span class="status-planning">Planning</span></td>
+        </tr>
+        <tr>
+          <td>Standardized monthly client reporting</td>
+          <td><span class="priority-high">High</span></td>
+          <td><span class="status-planning">Planning</span></td>
+        </tr>
+        <tr>
+          <td>Core Web Vitals and page speed monitoring</td>
+          <td><span class="priority-med">Medium</span></td>
+          <td><span class="status-planning">Planning</span></td>
+        </tr>
+        <tr>
+          <td>Per-client GSC ranking dashboard</td>
+          <td><span class="priority-high">High</span></td>
+          <td><span class="status-planning">Planning</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TOOLS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon">🛠️</div>
+      <div class="section-title">
+        <h2>Tools Stack</h2>
+        <p>What we use and why</p>
+      </div>
+    </div>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-name">WordPress + Rank Math</div>
+        <div class="tool-use">CMS + on-page SEO</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Google Search Console</div>
+        <div class="tool-use">Rankings, indexing, performance</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Google Business Profile</div>
+        <div class="tool-use">Local SEO management</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Whitespark</div>
+        <div class="tool-use">Citation building</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Signal Genesis / Search Atlas</div>
+        <div class="tool-use">Press release distribution</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">Zapier + Claude AI</div>
+        <div class="tool-use">Automated review replies</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">SE Ranking</div>
+        <div class="tool-use">Rank tracking + keyword research</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">DataForSEO</div>
+        <div class="tool-use">Backlink analysis</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <strong>Lawn &amp; Land Marketing</strong> — SEO Playbook &nbsp;·&nbsp; Last updated March 2026
+</footer>
+
+</body>
+</html>

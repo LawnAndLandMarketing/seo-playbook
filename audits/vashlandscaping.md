@@ -1,46 +1,27 @@
 # SEO Audit: Vash Landscaping
-**URL:** https://vashlandscaping.com/  
-**Audit Date:** 2026-03-25  
+**Audited:** 2026-03-26
+**Method:** Direct HTTP checks + HTML inspection
 
----
+## Quick Stats
+| Check | Result |
+|-------|--------|
+| Blog | Yes (HTTP 200 from /blog/) |
+| H1 Tag | Detected in HTML (4 H1 tags found) |
+| Meta Description | Present (144 chars) |
+| HTTPS | Redirects correctly |
+| Sitemap | /sitemap_index.xml |
+| Page Speed | 0.73s (Good — under 3s) |
+| GBP Link | Present |
+| Schema Markup | LocalBusiness, Organization, WebPage, WebSite |
+| Mobile Viewport | Present |
+| Social Links | Facebook |
 
-## Technical Health
-| Check | Result | Status |
-|-------|--------|--------|
-| SSL/HTTPS | HTTPS active | ✅ |
-| HTTP Status | 200 | ✅ |
-| robots.txt | 200 | ✅ |
-| XML Sitemap | 200 | ✅ |
-| Schema Markup | Yes | ✅ |
+## Score: ⚠️ 9/10
 
-## On-Page SEO
-| Element | Value | Status |
-|---------|-------|--------|
-| Title Tag | Landscaping Murfreesboro TN - VASH Landscaping | ✅ |
-| Meta Description | Landscaping Murfreesboro TN delivering premium outdoor transformations. Trust ou... | ✅ |
-| H1 | Missing | ⚠️ |
-| Local Keywords | No | ⚠️ |
-
-## Backlink Profile
-| Metric | Value |
-|--------|-------|
-| Total Backlinks | 4126 |
-| Referring Domains | 174 |
-| Spam Score | 247 |
-
-## Content
-| Metric | Value |
-|--------|-------|
-| Blog Present | No |
-| Estimated Pages | Unknown (no sitemap) |
-
-## Key Issues Found
-1. No H1 tag found
-2. No blog section found
+## Issues Found
+- Multiple H1 tags detected (4 H1s on homepage) — best practice is one H1 per page
 
 ## Recommendations
-1. Add H1 tag with primary keyword and location
-2. Launch a blog with local + service content (2-4 posts/month)
-
----
-*Score: 8.5/10*
+- Audit the 4 H1 tags and consolidate to a single primary H1 with target keyword
+- Add Instagram profile link
+- LocalBusiness schema confirmed — verify Murfreesboro, TN NAP accuracy

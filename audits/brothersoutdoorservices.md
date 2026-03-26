@@ -1,44 +1,27 @@
 # SEO Audit: Brothers Outdoor Services
-**URL:** https://brothersoutdoorservices.com/  
-**Audit Date:** 2026-03-25  
+**Audited:** 2026-03-26
+**Method:** Direct HTTP checks + HTML inspection
 
----
+## Quick Stats
+| Check | Result |
+|-------|--------|
+| Blog | Yes (HTTP 200 from /blog/) |
+| H1 Tag | Detected in HTML |
+| Meta Description | Present (148 chars) |
+| HTTPS | Redirects correctly |
+| Sitemap | /sitemap_index.xml |
+| Page Speed | 0.72s (Good — under 3s) |
+| GBP Link | Present |
+| Schema Markup | Organization, VideoObject, WebPage, WebSite |
+| Mobile Viewport | Present |
+| Social Links | Facebook |
 
-## Technical Health
-| Check | Result | Status |
-|-------|--------|--------|
-| SSL/HTTPS | HTTPS active | ✅ |
-| HTTP Status | 200 | ✅ |
-| robots.txt | 200 | ✅ |
-| XML Sitemap | 200 | ✅ |
-| Schema Markup | Yes | ✅ |
+## Score: ✅ 10/10
 
-## On-Page SEO
-| Element | Value | Status |
-|---------|-------|--------|
-| Title Tag | Premium Landscaping Services in Brookfield, Newtown, &amp; Bridgewater, CT - Bro... | ✅ |
-| Meta Description | Brothers Outdoor Services is your premier outdoor living &amp; maintenance solut... | ✅ |
-| H1 | Missing | ⚠️ |
-| Local Keywords | Yes (service) | ✅ |
-
-## Backlink Profile
-| Metric | Value |
-|--------|-------|
-| Total Backlinks | 4727 |
-| Referring Domains | 269 |
-| Spam Score | 283 |
-
-## Content
-| Metric | Value |
-|--------|-------|
-| Blog Present | Yes |
-| Estimated Pages | Unknown (no sitemap) |
-
-## Key Issues Found
-1. No H1 tag found
+## Issues Found
+No critical issues found.
 
 ## Recommendations
-1. Add H1 tag with primary keyword and location
-
----
-*Score: 9.0/10*
+- Upgrade schema from Organization to LocalBusiness for stronger local SEO
+- VideoObject schema detected — ensure video structured data is complete and accurate
+- Add Instagram profile link

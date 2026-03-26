@@ -1,44 +1,27 @@
 # SEO Audit: Full Service Property
-**URL:** https://fullserviceproperty.org/  
-**Audit Date:** 2026-03-25  
+**Audited:** 2026-03-26
+**Method:** Direct HTTP checks + HTML inspection
 
----
+## Quick Stats
+| Check | Result |
+|-------|--------|
+| Blog | Yes (HTTP 200 from /blog/) |
+| H1 Tag | Detected in HTML |
+| Meta Description | Present (156 chars) |
+| HTTPS | Redirects correctly |
+| Sitemap | /sitemap_index.xml |
+| Page Speed | 0.62s (Good — under 3s) |
+| GBP Link | Present |
+| Schema Markup | Organization, WebPage, WebSite |
+| Mobile Viewport | Present |
+| Social Links | None |
 
-## Technical Health
-| Check | Result | Status |
-|-------|--------|--------|
-| SSL/HTTPS | HTTPS active | ✅ |
-| HTTP Status | 200 | ✅ |
-| robots.txt | 200 | ✅ |
-| XML Sitemap | 200 | ✅ |
-| Schema Markup | Yes | ✅ |
+## Score: ⚠️ 9/10
 
-## On-Page SEO
-| Element | Value | Status |
-|---------|-------|--------|
-| Title Tag | Landscaping Excavation Services in Jefferson City | Full Service Property | ✅ |
-| Meta Description | We provide full-service landscaping excavation services across Tennessee. Let’s ... | ✅ |
-| H1 | Missing | ⚠️ |
-| Local Keywords | No | ⚠️ |
-
-## Backlink Profile
-| Metric | Value |
-|--------|-------|
-| Total Backlinks | 4502 |
-| Referring Domains | 199 |
-| Spam Score | 287 |
-
-## Content
-| Metric | Value |
-|--------|-------|
-| Blog Present | Yes |
-| Estimated Pages | Unknown (no sitemap) |
-
-## Key Issues Found
-1. No H1 tag found
+## Issues Found
+- No social media links detected on homepage (no Facebook, no Instagram)
 
 ## Recommendations
-1. Add H1 tag with primary keyword and location
-
----
-*Score: 9.0/10*
+- Add Facebook and/or Instagram profile links to homepage — social links support trust signals and local SEO
+- Upgrade schema from Organization to LocalBusiness
+- Note: .org domain is atypical for a property service business — ensure this doesn't create trust concerns with visitors
