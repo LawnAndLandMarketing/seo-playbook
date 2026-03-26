@@ -8,7 +8,7 @@ Internal SEO documentation and tooling for Lawn & Land Marketing.
 |------|-----|-------------|
 | SEO Playbook | https://lawnlab.dev/seo-playbook | Our full SEO process — every deliverable, every tool |
 | Client Audit Results | https://lawnlab.dev/seo-audit | Technical audit of all 27 client sites |
-| SEO Deliverables Checklist | https://lawnlab.dev/seo-checklist | 38-item checklist with automation scores and human involvement detail |
+| SEO Deliverables Checklist | https://lawnlab.dev/seo-checklist | 38-item checklist with automation scores — now a **live interactive SOP tracker** with Supabase-backed status tracking, per-item assignments, progress notes, and real-time progress bar (upgraded 2026-03-26) |
 
 ## Repository Contents
 
