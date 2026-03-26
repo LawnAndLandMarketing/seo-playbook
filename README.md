@@ -2,6 +2,8 @@
 
 The standardized SEO process we follow for every client, every month. No exceptions.
 
+**Live page:** [lawnlab.dev/seo-playbook](https://lawnlab.dev/seo-playbook)
+
 ---
 
 ## Philosophy
@@ -141,6 +143,14 @@ Every deliverable listed here is performed for every active SEO client unless ot
 | GSC performance | Monthly | Client email |
 | Blog delivered | Monthly | Published to site |
 | Press releases | 2x/month | Distributed |
+
+---
+
+## Client Audits
+
+Full SEO audits across 20 client sites — findings, recurring issues, and process improvements.
+
+Results logged in: [`audits/`](./audits/)
 
 ---
 
