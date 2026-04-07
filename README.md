@@ -188,3 +188,15 @@ These require a human to execute (can't be automated):
 
 *Built by Roshi 🐢 in collaboration with Matt Foreman — Lawn & Land Marketing*
 *Session: March 25–26, 2026 — SEO standardization sprint*
+
+---
+
+## Repository Relationship
+
+- **Canonical product:** SEO Playbook (internal documentation + tooling)
+- **This repo is the source of truth** for SEO standards, process docs, and client audit records
+- **Deployed to:** lawnlab.dev (via SiteGround SSH — files in `lawnlab-dev` repo)
+- **Related repos:** `seo-command-center` (live client SEO dashboard), `audit-reports` (prospect audit tool), `lawnlab-dev` (hosts the live pages)
+- **Depends on:** lawnlab.dev hosting (SiteGround + Vercel)
+
+> **⚠️ Naming note:** Was `ll-seo-playbook` — renamed to `seo-playbook` April 2026.
